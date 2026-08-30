@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioma Agency | Estrategia Digital Sostenible</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #15803D; /* Verde Esmeralda */
+            --secondary: #0F5132; /* Turquesa/Verde Profundo (Mares de Veraguas) */
+            --accent: #A3B18A; /* Verde Oliva Suave */
+            --bg-light: #F8FAFC;
+            --text-dark: #1E293B;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .cta-button {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(15,81,50,0.85), rgba(21,128,61,0.85)), url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--white);
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1200px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #EBF3EC;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            max-width: 800px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .contact-box {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-box h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .email-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Bioma Agency</a>
+            <a href="mailto:hola@biomaagency.com" class="cta-button">Hablemos</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Cultivamos tu presencia digital.</h1>
+            <p>Estrategia de marketing digital sostenible e integral en Panamá. Transformamos tu visión en un crecimiento orgánico y sólido como un ecosistema.</p>
+            <a href="mailto:hola@biomaagency.com" class="cta-button" style="font-size: 1.1rem; padding: 0.9rem 2rem;">Impulsa tu marca hoy</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-content">
+            <h2>marketing consciente y conectado</h2>
+            <p>Así como en la naturaleza cada elemento cumple un rol vital, en Bioma Agency conectamos cada canal de tu marca para generar resultados sostenibles. Ayudamos a empresas en Panamá y la región a florecer en el entorno digital.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2 class="section-title">Nuestro Ecosistema de Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🌱 Estrategia Digital</h3>
+                <p>Análisis profundo y hoja de ruta comercial enfocada en la rentabilidad y el crecimiento a largo plazo.</p>
+            </div>
+            <div class="service-card">
+                <h3>🌊 SEO & Posicionamiento</h3>
+                <p>Hacemos que tu marca destaque en los motores de búsqueda, atrayendo tráfico calificado de forma orgánica.</p>
+            </div>
+            <div class="service-card">
+                <h3>🌿 Publicidad (SEM & Ads)</h3>
+                <p>Campañas de alto rendimiento en redes sociales y buscadores segmentadas para maximizar tu inversión.</p>
+            </div>
+            <div class="service-card">
+                <h3>🍃 Contenido & Redes</h3>
+                <p>Creación de contenido relevante y gestión de comunidades que conectan genuinamente con tu audiencia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact-box">
+            <h2>¿Listo para crecer?</h2>
+            <p>Escríbenos directamente y empecemos a diseñar la estrategia digital de tu negocio.</p>
+            <a href="mailto:hola@biomaagency.com" class="email-link">hola@biomaagency.com</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bioma Agency. Todos los derechos reservados. Hecho en Panamá.</p>
+    </footer>
+
+</body>
+</html>
